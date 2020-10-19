@@ -11,9 +11,10 @@ describe 'navigate' do
     visit "/posts/#{@post.id}"
     expect(page.status_code).to eq(200)
   end
-end
   it 'shows the title on the show page in an h1 tag' do
     visit "/posts/#{@post.id}"
     expect(page).to have_css("h1", text: "My Post")
   end
 end
+  
+
